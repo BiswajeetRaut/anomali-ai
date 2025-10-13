@@ -36,8 +36,9 @@ Inside `backend/`:
 
 ```env
 GROQ_API_KEY=your_groq_api_key
-GROQ_MODEL=llama3-70b-8192
-GOOGLE_APPLICATION_CREDENTIALS=service-account-key.json
+GROQ_MODEL=openai/gpt-oss-20b
+GROQ_EMBED_MODEL=nomic-embed-text-v1.5
+GOOGLE_APPLICATION_CREDENTIALS=firestore-service-key.json
 CHROMA_PATH=./chroma_store
 ```
 
