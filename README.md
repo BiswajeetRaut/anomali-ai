@@ -290,7 +290,7 @@ This ensures **zero hallucination** and **true log-grounded responses**.
 **Biswajeet Raut**  
 *Full Stack & AI Engineer*  
 🚀 Building intelligent backend systems merging LLMs with observability.  
-📧 [biswajeet.raut@domain.com](mailto:biswajeet.raut@domain.com)
+📧 [biswajeetraut382@gmail.com](mailto:biswajeetraut382@gmail.com)
 
 ---
 
