@@ -89,15 +89,15 @@ export const db = getFirestore(app);
 
 ```mermaid
 graph TD
-A[User / DevOps Engineer] -->|Chat Query| B[React Frontend]
-B -->|Axios POST /ask_ai| C[FastAPI Backend]
-C -->|LLM + RAG| D[Groq + LangChain Engine]
-D -->|Vector Search| E[Chroma VectorDB]
-C -->|Store Logs + Anomalies| F[Firestore Database]
-E -->|Relevant Context| D
-D -->|Final Response| C
-C -->|Realtime Updates| F
-F -->|onSnapshot()| B
+  A[User / DevOps Engineer] --> B[React Frontend]
+  B --> C[FastAPI Backend]
+  C --> D[Groq + LangChain Engine]
+  D --> E[Chroma VectorDB]
+  C --> F[Firestore Database]
+  E --> D
+  D --> C
+  C --> F
+  F --> B
 ```
 
 ### 🧩 Components Overview
