@@ -31,7 +31,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-#### 2️⃣ Create `.env` File
+#### 2️⃣ Create `.env` File and Configure service account key for firestore
 Inside `backend/`:
 
 ```env
@@ -40,6 +40,12 @@ GROQ_MODEL=openai/gpt-oss-20b
 GROQ_EMBED_MODEL=nomic-embed-text-v1.5
 GOOGLE_APPLICATION_CREDENTIALS=firestore-service-key.json
 CHROMA_PATH=./chroma_store
+```
+
+Inside `backend/`:
+There is a file named by firestore-service-key.json: 
+```
+You need to add the service account key json details for configuring firestore operations in your backend
 ```
 
 #### 3️⃣ Run the Server
