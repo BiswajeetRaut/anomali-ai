@@ -292,6 +292,50 @@ This ensures **zero hallucination** and **true log-grounded responses**.
 
 ---
 
+## Results
+
+This section visually demonstrates the full pipeline:
+> 🧠 Anomalies are generated → 🔥 Stored in Firestore → 💾 Embedded in ChromaDB → 🤖 Queried via RAG → 💬 AI Responds Contextually
+
+---
+
+### 🧩 Step 1 — Anomalies Generated Automatically
+
+When synthetic logs are fetched via:
+```bash
+POST /fetch_and_store_logs?tenant_id=CUST001&app_id=APP01
+```
+```json
+{
+  "summary": "Critical anomalies found: database connectivity failures and NullPointerException.",
+  "detected_anomalies": [
+    "Database connection lost",
+    "PaymentProcessor NullPointerException"
+  ],
+  "probable_causes": [
+    "Transient DB network issue",
+    "Bug in PaymentProcessor"
+  ],
+  "severity_level": "Critical",
+  "recommended_action": "Restart DB service and fix the null reference issue."
+}
+```
+The below is the screenshot of dashboard where recent logs are displayed...
+<img width="1440" height="774" alt="Screenshot 2025-10-29 at 9 31 25 AM" src="https://github.com/user-attachments/assets/a8d1af8f-2eda-4208-a604-053fb8eb8856" />
+
+Once the anomalies are detected and stored in firebase then it is being displayed here:
+<img width="971" height="761" alt="Screenshot 2025-10-29 at 9 35 50 AM" src="https://github.com/user-attachments/assets/fea2845c-7d4e-4474-99b4-55ec45c4e6b9" />
+
+The beloew screenshot shows the operations happing at backend once the generate logs button is clicked. It will trigger for each 5 minutes and generate new logs:
+<img width="1440" height="774" alt="Screenshot 2025-10-29 at 9 32 40 AM" src="https://github.com/user-attachments/assets/0d6c206f-18f9-4663-a944-d69defb3e484" />
+
+<img width="1440" height="683" alt="Screenshot 2025-10-29 at 9 33 38 AM" src="https://github.com/user-attachments/assets/59d46ca1-94d6-40be-b3b9-6016bfa46f5b" />
+
+The below image shows the chat functionality which gives details of logs, anomalies levearging the functionality of RAG:
+
+<img width="507" height="761" alt="Screenshot 2025-10-29 at 9 35 29 AM" src="https://github.com/user-attachments/assets/f85c0eda-d339-4e76-8ffb-ae043d479f8b" />
+
+
 ## 👨‍💻 Author
 
 **Biswajeet Raut**  
