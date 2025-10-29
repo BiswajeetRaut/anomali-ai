@@ -305,6 +305,7 @@ When synthetic logs are fetched via:
 ```bash
 POST /fetch_and_store_logs?tenant_id=CUST001&app_id=APP01
 ```
+Example response:
 ```json
 {
   "summary": "Critical anomalies found: database connectivity failures and NullPointerException.",
