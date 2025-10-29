@@ -320,16 +320,21 @@ POST /fetch_and_store_logs?tenant_id=CUST001&app_id=APP01
   "recommended_action": "Restart DB service and fix the null reference issue."
 }
 ```
-The below is the screenshot of dashboard where recent logs are displayed...
+The below is the screenshot of dashboard where recent logs are displayed:
+
 <img width="1440" height="774" alt="Screenshot 2025-10-29 at 9 31 25 AM" src="https://github.com/user-attachments/assets/a8d1af8f-2eda-4208-a604-053fb8eb8856" />
 
 Once the anomalies are detected and stored in firebase then it is being displayed here:
+
 <img width="971" height="761" alt="Screenshot 2025-10-29 at 9 35 50 AM" src="https://github.com/user-attachments/assets/fea2845c-7d4e-4474-99b4-55ec45c4e6b9" />
 
 The beloew screenshot shows the operations happing at backend once the generate logs button is clicked. It will trigger for each 5 minutes and generate new logs:
-<img width="1440" height="774" alt="Screenshot 2025-10-29 at 9 32 40 AM" src="https://github.com/user-attachments/assets/0d6c206f-18f9-4663-a944-d69defb3e484" />
 
 <img width="1440" height="683" alt="Screenshot 2025-10-29 at 9 33 38 AM" src="https://github.com/user-attachments/assets/59d46ca1-94d6-40be-b3b9-6016bfa46f5b" />
+
+The below screenshot shows how the logs, anomalies and user conversations are stored in the firestore:
+
+<img width="1440" height="774" alt="Screenshot 2025-10-29 at 9 32 40 AM" src="https://github.com/user-attachments/assets/0d6c206f-18f9-4663-a944-d69defb3e484" />
 
 The below image shows the chat functionality which gives details of logs, anomalies levearging the functionality of RAG:
 
